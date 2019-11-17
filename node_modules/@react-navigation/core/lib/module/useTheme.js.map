@@ -1,0 +1,1 @@
+{"version":3,"sources":["useTheme.ts"],"names":["useContext","ThemeContext"],"mappings":"AAAA,OAASA,UAAT,KAA2B,OAA3B,CACA,MAAOC,CAAAA,YAAP,KAAyB,sBAAzB,CAEA,eAAe,iBAAMD,CAAAA,UAAU,CAACC,YAAD,CAAhB,EAAf","sourcesContent":["import { useContext } from 'react';\nimport ThemeContext from './views/ThemeContext';\n\nexport default () => useContext(ThemeContext);\n"]}

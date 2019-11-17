@@ -1,0 +1,2 @@
+import{NativeModules}from'react-native';var PlatformConstants=NativeModules.PlatformConstants;export var supportsImprovedSpringAnimation=function supportsImprovedSpringAnimation(){if(PlatformConstants&&PlatformConstants.reactNativeVersion){var _PlatformConstants$re=PlatformConstants.reactNativeVersion,major=_PlatformConstants$re.major,minor=_PlatformConstants$re.minor;return minor>=50||major===0&&minor===0;}return false;};
+//# sourceMappingURL=ReactNativeFeatures.js.map

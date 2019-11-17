@@ -1,0 +1,2 @@
+var _interopRequireDefault=require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports,"__esModule",{value:true});exports.jumpTo=exports.JUMP_TO=void 0;var _objectSpread2=_interopRequireDefault(require("@babel/runtime/helpers/objectSpread"));var JUMP_TO='Navigation/JUMP_TO';exports.JUMP_TO=JUMP_TO;var jumpTo=function jumpTo(payload){return(0,_objectSpread2.default)({type:JUMP_TO,preserveFocus:true},payload);};exports.jumpTo=jumpTo;
+//# sourceMappingURL=SwitchActions.js.map

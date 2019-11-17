@@ -1,0 +1,2 @@
+import _objectSpread from"@babel/runtime/helpers/objectSpread";import SwitchRouter from'./SwitchRouter';import withDefaultValue from'../utils/withDefaultValue';export default(function(routeConfigs){var config=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};config=_objectSpread({},config);config=withDefaultValue(config,'resetOnBlur',false);config=withDefaultValue(config,'backBehavior','initialRoute');var switchRouter=SwitchRouter(routeConfigs,config);return switchRouter;});
+//# sourceMappingURL=TabRouter.js.map

@@ -1,0 +1,2 @@
+import createNavigator from'../navigators/createNavigator';import SwitchRouter from'../routers/SwitchRouter';import SwitchView from'../views/SwitchView/SwitchView';function createSwitchNavigator(routeConfigMap){var switchConfig=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var router=SwitchRouter(routeConfigMap,switchConfig);var Navigator=createNavigator(SwitchView,router,switchConfig);return Navigator;}export default createSwitchNavigator;
+//# sourceMappingURL=createSwitchNavigator.js.map

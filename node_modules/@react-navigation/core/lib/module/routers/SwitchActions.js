@@ -1,0 +1,2 @@
+import _objectSpread from"@babel/runtime/helpers/objectSpread";export var JUMP_TO='Navigation/JUMP_TO';export var jumpTo=function jumpTo(payload){return _objectSpread({type:JUMP_TO,preserveFocus:true},payload);};
+//# sourceMappingURL=SwitchActions.js.map

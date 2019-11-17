@@ -1,0 +1,1 @@
+{"version":3,"sources":["StackGestureContext.tsx"],"names":["React","createContext"],"mappings":"qKAAA,oD,aAGeA,KAAK,CAACC,aAAN,CAAyD,IAAzD,C","sourcesContent":["import * as React from 'react';\nimport { PanGestureHandler } from 'react-native-gesture-handler';\n\nexport default React.createContext<React.Ref<PanGestureHandler> | null>(null);\n"]}
