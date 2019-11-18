@@ -39,8 +39,10 @@ export default class ThirdPage extends Component {
         title= 'Enviar'
         onPress={() =>
          {
-          writeUserData(reserva.replace(/["{[,\}\]]/g , ""))
-          console.log(reserva.replace(/["{[,\}\]]/g, ""))     
+          writeUserData(reserva.replace(/["{[,\}\]]/g , "")
+          .split('type:displayName:TextpropTypes:key:nullref:nullprops:style:backgroundColor:whitechildren:'))
+          console.log(reserva.replace(/["{[,\}\]]/g, ""))
+          navigate('ForthPage')     
          }
          } >
         </Button>
