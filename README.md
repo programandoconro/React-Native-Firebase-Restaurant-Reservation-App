@@ -20,13 +20,13 @@ https://github.com/progamandoconro/Firebase-Real-Time-Web-Admin-App
 # Funcionalidades:
 
 * Enviar y recibier datos en tiempo real a partir de Firebase.
-* Autenticación y creación de nuevo usuario con Firebase Autentication.
+* Autenticación y creación de nuevo usuario con Firebase Auth.
 
 # Para instalar, clonar este repositorio y en la carpeta creada instalar la App y sus dependencias.
 
    git clone https://github.com/progamandoconro/React-Native-Restaurant-Reservation-App 
    cd React-Native-Restaurant-Reservation-App
    npm install
-   npm start
+   expo start
    
  

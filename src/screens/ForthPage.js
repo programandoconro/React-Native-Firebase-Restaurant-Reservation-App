@@ -1,34 +1,48 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, Button, FlatList, TouchableOpacity } from 'react-native';
+import { View, Text } from 'react-native';
 import Background from "../components/Background";
 
-import firebase from 'firebase'
-import { FIREBASE_CONFIG } from "../core/config"
+import firebase from '@firebase/app'
+import { FlatList, ScrollView } from 'react-native-gesture-handler';
 
-if (!firebase.apps.length) {
-  firebase.initializeApp(FIREBASE_CONFIG);
-}
 export default class ForthPage extends Component{
-  constructor(){
+
+
+  constructor() {
     super()
-    this.state = {
-      name:'Carlos'
+    this.state = {      
+      reservas:[],
     }
   }
-  componentDidMount () {
-    const nameRef = firebase.database().ref().child('reservas').child('datos')
-    nameRef.on('value', (snapshot)=> {
-      this.setState({
-        name: snapshot.val()
-      })
-    })
-  }
 
+  componentDidMount () {
+
+    const readUsersData = ()=> {
+    const nameRef =  firebase.database().ref('users')
+    nameRef.on('value', (snapshot)=> {
+      const state = snapshot.val()
+      this.state.reservas =  state
+      
+
+  })
+  }
+  readUsersData()
+  const pushAdminData = (data)  => {
+    this.setState({data })
+  }
+  pushAdminData(this.state.reservas)
+  }
+  
 render(){
+  const reservas =  JSON.stringify(this.state.reservas)
+ 
+
   return (
 <Background>
 <View>
-  <Text>Hola {this.state.name}</Text>
+<ScrollView>
+    <Text> Hola {reservas}</Text>  
+</ScrollView>
   </View>
   </Background>
   )

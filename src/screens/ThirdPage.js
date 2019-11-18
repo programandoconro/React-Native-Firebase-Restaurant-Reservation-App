@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, Button, FlatList, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, Button } from 'react-native';
 import Background from "../components/Background";
 
 import firebase from 'firebase'
-import { FIREBASE_CONFIG } from "../core/config";
-import { stringify } from 'qs';
 
 if (!firebase.apps.length) {
   firebase.initializeApp(FIREBASE_CONFIG);
@@ -23,6 +21,7 @@ const writeUserData =(userInfo)=> {
 export default class ThirdPage extends Component {
   render() {    
     const { navigate } = this.props.navigation;
+    const reserva = JSON.stringify(this.props.navigation.state.params.JSON_ListView_Clicked_Item)
     return (
       <Background>
       <View>
@@ -40,8 +39,8 @@ export default class ThirdPage extends Component {
         title= 'Enviar'
         onPress={() =>
          {
-          writeUserData(stringify(this.props.navigation.state.params.JSON_ListView_Clicked_Item))
-          console.log(stringify(this.props.navigation.state.params.JSON_ListView_Clicked_Item))     
+          writeUserData(reserva.replace(/["{[,\}\]]/g , ""))
+          console.log(reserva.replace(/["{[,\}\]]/g, ""))     
          }
          } >
         </Button>
