@@ -55,8 +55,18 @@ export default class ThirdPage extends Component {
         }
          >
          </Button> 
+
+         <Text> </Text>
+
+         <Button
+          title="Cancelar" 
+          color="red"          
+          onPress={() =>
+            navigate('FirstPage')
+ 
+          } 
+        />
         
-       
       </View>
       </Background>
     );

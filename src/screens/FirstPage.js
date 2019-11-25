@@ -2,6 +2,7 @@ import React, { Component, memo} from 'react';
 import { StyleSheet, View, Button, TextInput, Text } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import Background from "../components/Background";
+import CalendarPicker from 'react-native-calendar-picker';
 
 class FirstPage extends Component {
   constructor(props) {
@@ -13,10 +14,19 @@ class FirstPage extends Component {
       comensales:'',
       fecha:'',
       hora:'',
-      
+      selectedStartDate: null,
+           
     };
+    this.onDateChange = this.onDateChange.bind(this);
   } 
+  onDateChange(date) {
+    this.setState({
+      selectedStartDate: date,
+    });
+  }
   render() {
+    const { selectedStartDate } = this.state;
+    const startDate = selectedStartDate ? selectedStartDate.toString() : '';
     const { navigate } = this.props.navigation;
     return (
 
@@ -52,15 +62,11 @@ class FirstPage extends Component {
           placeholderTextColor='black'
 
         />
-       
-        <TextInput
-          value={this.state.fecha}
-          onChangeText={ fecha => this.setState({ fecha })}
-          placeholder={' Fecha: '}
-          style={styles.input}
-          placeholderTextColor='black'          
 
-        />
+          <CalendarPicker
+           onDateChange={this.onDateChange}
+             
+          />
 
         <TextInput
           value={this.state.hora}
@@ -69,15 +75,20 @@ class FirstPage extends Component {
           style={styles.input}
           placeholderTextColor='black'
           
-        />
+        />    
+      
       <View style={styles.button}>
         <Button
           title="Reservar"
           color="#F6820D"
           onPress={() =>
-            navigate('SecondPage', {
-              JSON_ListView_Clicked_Item: " Nombre: "+ this.state.username +  " Email: " + this.state.email  + " Comensales: " + this.state.comensales+ " Fecha: " + this.state.fecha+  " Hora: "+this.state.hora,
-
+            navigate('ThirdPage', {
+              JSON_ListView_Clicked_Item: " Nombre: " + this.state.username
+               +  " Email: " + this.state.email  
+               + " Comensales: "  + this.state.comensales
+               + " Fecha: " +  startDate 
+               +  " Hora: " + this.state.hora
+               
             })            
           }
         />

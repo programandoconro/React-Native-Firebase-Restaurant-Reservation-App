@@ -10,7 +10,6 @@ import {
   Dashboard,
   mainPage,
   FirstPage,
-  SecondPage,
   ThirdPage,
   ForthPage
 } from "./screens";
@@ -25,7 +24,6 @@ const Router = createStackNavigator(
     AuthLoadingScreen,
     mainPage,
     FirstPage,
-    SecondPage,
     ThirdPage,
     ForthPage
   },
