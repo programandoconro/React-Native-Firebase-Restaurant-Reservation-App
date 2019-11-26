@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { Button, View, Text } from 'react-native';
 import Background from "../components/Background";
@@ -8,7 +7,6 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 export default class ForthPage extends Component{
 
-
   constructor() {
     super()
     this.state = {      
@@ -16,27 +14,19 @@ export default class ForthPage extends Component{
     }
   }
 
-  componentDidMount () {
-
-    const readUsersData = ()=> {
+componentDidMount() {
+  const readUsersData = ()=> {
     const nameRef =  firebase.database().ref('user0001')
     nameRef.on('value', (snapshot)=> {
-      const state = snapshot.val()
-      this.state.reservas =  state
-      
-  })
-  }
-  readUsersData()
-  const pushAdminData = (data)  => {
-    this.setState({data })
-  }
-  pushAdminData(this.state.reservas)
-  }
+       const state = snapshot.val()
+       this.setState({reservas:state}) })
+}
+readUsersData();
+}
   
 render(){
-  const reservas =  JSON.stringify(this.state.reservas)
+  const reservas =   JSON.stringify(this.state.reservas);
   const { navigate } = this.props.navigation;
-
 
   return (
 <Background>

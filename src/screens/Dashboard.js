@@ -13,18 +13,16 @@ const Dashboard = ({navigation}) => (
     <Paragraph>
     Gracias por su visita. 
     </Paragraph>
+    <Button 
+    mode="outlined" onPress={() => navigation.navigate("mainPage")}>
+      Entrar
+    </Button>
+
     <Button mode="outlined" onPress={() => logoutUser()}>
       Salir
     </Button>
 
-    <Button mode="outlined" onPress={() => navigation.navigate("mainPage")}>
-      RESERVAS
-    </Button>
   </Background>
-
-
-
-
 
 );
 

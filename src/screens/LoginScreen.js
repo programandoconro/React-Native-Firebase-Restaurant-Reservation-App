@@ -49,7 +49,7 @@ const LoginScreen = ({ navigation }) => {
 
       <Logo />
 
-      <Header>Welcome back.</Header>
+      <Header> Bienvenido </Header>
 
       <TextInput
         label="Email"
@@ -79,18 +79,18 @@ const LoginScreen = ({ navigation }) => {
         <TouchableOpacity
           onPress={() => navigation.navigate("ForgotPasswordScreen")}
         >
-          <Text style={styles.label}>Forgot your password?</Text>
+          <Text style={styles.label}> Olvidaste tu clave?</Text>
         </TouchableOpacity>
       </View>
 
       <Button loading={loading} mode="contained" onPress={_onLoginPressed}>
-        Login
+        Entrar
       </Button>
 
       <View style={styles.row}>
-        <Text style={styles.label}>Don’t have an account? </Text>
+        <Text style={styles.label}> ¿Aún no tienes cuenta? </Text>
         <TouchableOpacity onPress={() => navigation.navigate("RegisterScreen")}>
-          <Text style={styles.link}>Sign up</Text>
+          <Text style={styles.link}> Regístrate </Text>
         </TouchableOpacity>
       </View>
 

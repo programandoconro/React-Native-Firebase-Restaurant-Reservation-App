@@ -17,23 +17,23 @@ export const signInUser = async ({ name, email, password }) => {
     switch (error.code) {
       case "auth/email-already-in-use":
         return {
-          error: "E-mail already in use."
+          error: "Dirección de correo ya registrada."
         };
       case "auth/invalid-email":
         return {
-          error: "Invalid e-mail address format."
+          error: "Dirección de correo con formato incorrecto."
         };
       case "auth/weak-password":
         return {
-          error: "Password is too weak."
+          error: "Clave es muy débil"
         };
       case "auth/too-many-requests":
         return {
-          error: "Too many request. Try again in a minute."
+          error: "Demasiados intentos. Espero 1 minuto e intenta de nuevo."
         };
       default:
         return {
-          error: "Check your internet connection."
+          error: "Revisa tu conexión a Internet."
         };
     }
   }
@@ -47,20 +47,20 @@ export const loginUser = async ({ email, password }) => {
     switch (error.code) {
       case "auth/invalid-email":
         return {
-          error: "Invalid email address format."
+          error: "Correo con formato incorrecto."
         };
       case "auth/user-not-found":
       case "auth/wrong-password":
         return {
-          error: "Invalid email address or password."
+          error: "Contraseña o correo incorrectos"
         };
       case "auth/too-many-requests":
         return {
-          error: "Too many request. Try again in a minute."
+          error: "Demasiados intentos. Espera un minuto e intenta de nuevo."
         };
       default:
         return {
-          error: "Check your internet connection."
+          error: "Revisa tu conexión a Internet."
         };
     }
   }
@@ -74,15 +74,15 @@ export const sendEmailWithPassword = async email => {
     switch (error.code) {
       case "auth/invalid-email":
         return {
-          error: "Invalid email address format."
+          error: "Correo Electrónico con formato incorrecto."
         };
       case "auth/user-not-found":
         return {
-          error: "User with this email does not exist."
+          error: "El usuario con este correo no existe."
         };
       case "auth/too-many-requests":
         return {
-          error: "Too many request. Try again in a minute."
+          error: "Demasiados intento, espera un minuto e intenta de nuevo."
         };
       default:
         return {
