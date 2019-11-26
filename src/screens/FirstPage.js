@@ -10,7 +10,6 @@ class FirstPage extends Component {
     this.state = {
       username: '',
       phone :'',
-      email :'',
       comensales:'',
       fecha:'',
       hora:'',
@@ -28,6 +27,11 @@ class FirstPage extends Component {
     const { selectedStartDate } = this.state;
     const startDate = selectedStartDate ? selectedStartDate.toString() : '';
     const { navigate } = this.props.navigation;
+    
+    dataToSend = {JSON_ListView_Clicked_Item: " Nombre: " + this.state.username
+    + " Comensales: "  + this.state.comensales
+    + " Fecha: " +  startDate 
+    +  " Hora: " + this.state.hora}
     return (
 
       <Background>  
@@ -62,7 +66,6 @@ class FirstPage extends Component {
           placeholderTextColor='black'
 
         />
-
           <CalendarPicker
            onDateChange={this.onDateChange}
              
@@ -79,21 +82,14 @@ class FirstPage extends Component {
       
       <View style={styles.button}>
         <Button
+          style={styles.input}
           title="Reservar"
           color="#F6820D"
           onPress={() =>
-            navigate('ThirdPage', {
-              JSON_ListView_Clicked_Item: " Nombre: " + this.state.username
-               +  " Email: " + this.state.email  
-               + " Comensales: "  + this.state.comensales
-               + " Fecha: " +  startDate 
-               +  " Hora: " + this.state.hora
-               
-            })            
+            navigate('ThirdPage', dataToSend)            
           }
         />
         </View>
-      
       </ScrollView>
 </View>
       
