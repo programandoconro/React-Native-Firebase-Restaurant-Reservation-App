@@ -26,7 +26,7 @@ readUsersData();
   
 render(){
   const reservas =   JSON.stringify(this.state.reservas);
-  const { navigate } = this.props.navigation;
+  const {navigate} = this.props.navigation;
 
   return (
 <Background>

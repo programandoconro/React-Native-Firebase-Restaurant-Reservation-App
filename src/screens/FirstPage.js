@@ -25,7 +25,7 @@ class FirstPage extends Component {
   }
   render() {
     const { selectedStartDate } = this.state;
-    const startDate = selectedStartDate ? selectedStartDate.toString() : '';
+    const startDate = selectedStartDate ? selectedStartDate.toString().split('00:00:00 GMT+0000') : '';
     const { navigate } = this.props.navigation;
     
     dataToSend = {data: " Nombre: " + this.state.username
@@ -47,7 +47,6 @@ class FirstPage extends Component {
           style={styles.input}
           placeholderTextColor='black'
           
-
         />
         <TextInput
           value={this.state.phone}
