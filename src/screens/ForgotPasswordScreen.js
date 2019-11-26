@@ -35,7 +35,7 @@ const ForgotPasswordScreen = ({ navigation }) => {
     } else {
       setToast({
         type: "success",
-        value: "Email with password has been sent."
+        value: "El correo ha sido enviado."
       });
     }
 
@@ -48,10 +48,10 @@ const ForgotPasswordScreen = ({ navigation }) => {
 
       <Logo />
 
-      <Header>Restore Password</Header>
+      <Header>Recuperar constraseña</Header>
 
       <TextInput
-        label="E-mail address"
+        label="Email"
         returnKeyType="done"
         value={email.value}
         onChangeText={text => setEmail({ value: text, error: "" })}
@@ -69,14 +69,14 @@ const ForgotPasswordScreen = ({ navigation }) => {
         onPress={_onSendPressed}
         style={styles.button}
       >
-        Send Reset Instructions
+        Enviar instrucciones al correo
       </Button>
 
       <TouchableOpacity
         style={styles.back}
         onPress={() => navigation.navigate("LoginScreen")}
       >
-        <Text style={styles.label}>← Back to login</Text>
+        <Text style={styles.label}>← Regresar al menu</Text>
       </TouchableOpacity>
 
       <Toast

@@ -57,10 +57,10 @@ const RegisterScreen = ({ navigation }) => {
 
       <Logo />
 
-      <Header>Create Account</Header>
+      <Header> Crea tu cuenta </Header>
 
       <TextInput
-        label="Name"
+        label="Nombre"
         returnKeyType="next"
         value={name.value}
         onChangeText={text => setName({ value: text, error: "" })}
@@ -82,7 +82,7 @@ const RegisterScreen = ({ navigation }) => {
       />
 
       <TextInput
-        label="Password"
+        label="Contraseña"
         returnKeyType="done"
         value={password.value}
         onChangeText={text => setPassword({ value: text, error: "" })}
@@ -98,11 +98,11 @@ const RegisterScreen = ({ navigation }) => {
         onPress={_onSignUpPressed}
         style={styles.button}
       >
-        Sign Up
+        Registrarse
       </Button>
 
       <View style={styles.row}>
-        <Text style={styles.label}>Already have an account? </Text>
+        <Text style={styles.label}> ¿ Ya tienes una cuenta ? </Text>
         <TouchableOpacity onPress={() => navigation.navigate("LoginScreen")}>
           <Text style={styles.link}>Login</Text>
         </TouchableOpacity>
