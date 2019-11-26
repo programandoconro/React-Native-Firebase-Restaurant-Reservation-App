@@ -47,16 +47,6 @@ export default class ThirdPage extends Component {
          } >
         </Button>
         <Text> </Text>
-        <Button 
-        color= 'orange'
-        title= 'Ir a Mis Reservas'
-        onPress={() =>
-         {navigate('ForthPage')}
-        }
-         >
-         </Button> 
-
-         <Text> </Text>
 
          <Button
           title="Cancelar" 

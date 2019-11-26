@@ -34,8 +34,8 @@ class FirstPage extends Component {
     +  " Hora: " + this.state.hora}
     return (
 
-      <Background>  
-      <View> 
+    
+      <View style={{padding:20}}> 
       <ScrollView>
 
       <Text style={{fontStyle:'italic'}}>  </Text>
@@ -65,10 +65,6 @@ class FirstPage extends Component {
           placeholderTextColor='black'
 
         />
-          <CalendarPicker
-           onDateChange={this.onDateChange}
-             
-          />
 
         <TextInput
           value={this.state.hora}
@@ -77,8 +73,20 @@ class FirstPage extends Component {
           style={styles.input}
           placeholderTextColor='black'
           
-        />    
-      
+        />  
+
+
+</ScrollView>
+
+
+        <View>
+          <CalendarPicker
+           onDateChange={this.onDateChange}
+           weekdays={['Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab', 'Dom']}
+           months={['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']}
+             
+          />
+
       <View style={styles.button}>
         <Button
           style={styles.input}
@@ -89,10 +97,10 @@ class FirstPage extends Component {
           }
         />
         </View>
-      </ScrollView>
+        </View>
 </View>
       
-</Background>
+
 
     );
   }
@@ -100,7 +108,7 @@ class FirstPage extends Component {
 const styles = StyleSheet.create({
   input: {
     flex:1,
-    padding: 10,
+    padding: 5,
     marginBottom: 10,
     backgroundColor: '#D3D3D3',
     borderRadius:20,
