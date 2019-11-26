@@ -28,7 +28,7 @@ class FirstPage extends Component {
     const startDate = selectedStartDate ? selectedStartDate.toString() : '';
     const { navigate } = this.props.navigation;
     
-    dataToSend = {JSON_ListView_Clicked_Item: " Nombre: " + this.state.username
+    dataToSend = {data: " Nombre: " + this.state.username
     + " Comensales: "  + this.state.comensales
     + " Fecha: " +  startDate 
     +  " Hora: " + this.state.hora}

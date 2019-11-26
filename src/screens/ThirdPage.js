@@ -21,7 +21,7 @@ const writeUserData =(userInfo)=> {
 export default class ThirdPage extends Component {
   render() {    
     const { navigate } = this.props.navigation;
-    const reserva = JSON.stringify(this.props.navigation.state.params.JSON_ListView_Clicked_Item)
+    const reserva = JSON.stringify(this.props.navigation.state.params.data)
     return (
       <Background>
       <View>
@@ -29,7 +29,7 @@ export default class ThirdPage extends Component {
           Su reserva está en proceso:
         </Text>
         <Text style={styles.TextStyle}>
-        {this.props.navigation.state.params.JSON_ListView_Clicked_Item}
+        {this.props.navigation.state.params.data}
         </Text>  
         <Text style={styles.TextStyle}>
         </Text>

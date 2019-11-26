@@ -13,8 +13,8 @@ const Dashboard = ({navigation}) => (
     <Paragraph>
     Gracias por su visita. 
     </Paragraph>
-
-    <Button mode="outlined" onPress={() => navigation.navigate("mainPage")}>
+    <Button 
+    mode="outlined" onPress={() => navigation.navigate("mainPage")}>
       Entrar
     </Button>
 
@@ -22,12 +22,7 @@ const Dashboard = ({navigation}) => (
       Salir
     </Button>
 
-   
   </Background>
-
-
-
-
 
 );
 
