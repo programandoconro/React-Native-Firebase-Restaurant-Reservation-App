@@ -6,19 +6,24 @@ import Button from "../components/Button";
 
 const HomeScreen = ({ navigation }) => (
   <Background>
-    <Logo />
-    <Header> Cactus Restaurante </Header>
-
-    <Button mode="contained" onPress={() => navigation.navigate("LoginScreen")}>
-      Entrar
-    </Button>
-    <Button
-      mode="outlined"
-      onPress={() => navigation.navigate("RegisterScreen")}
-    >
-      Registrarse
-    </Button>
+  <Logo />
+  <Header> Cactus Restaurante </Header>
+  
+  <Button 
+  mode="contained" 
+  onPress={() => navigation.navigate("LoginScreen")}
+  
+  >
+  Entrar
+  </Button>
+  <Button
+  mode="outlined"
+  onPress={() => navigation.navigate("RegisterScreen")}
+  >
+  Registrarse
+  </Button>
   </Background>
-);
-
-export default memo(HomeScreen);
+  );
+  
+  export default memo(HomeScreen);
+  
