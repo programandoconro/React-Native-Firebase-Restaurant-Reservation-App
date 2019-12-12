@@ -8,22 +8,23 @@ import { logoutUser } from "../api/auth-api";
 
 const Dashboard = ({navigation}) => (
   <Background>
-    <Logo />
-    <Header>Cactus Restaurante</Header>
-    <Paragraph>
-    Gracias por su visita. 
-    </Paragraph>
-    <Button 
-    mode="outlined" onPress={() => navigation.navigate("mainPage")}>
-      Entrar
-    </Button>
-
-    <Button mode="outlined" onPress={() => logoutUser()}>
-      Salir
-    </Button>
-
+  <Logo />
+  <Header>Cactus Restaurante</Header>
+  <Paragraph>
+  Gracias por su visita. 
+  </Paragraph>
+  <Button 
+  mode="outlined" onPress={() => navigation.navigate("mainPage")}>
+  Entrar
+  </Button>
+  
+  <Button mode="outlined" onPress={() => logoutUser()}>
+  Salir
+  </Button>
+  
   </Background>
-
-);
-
-export default memo(Dashboard);
+  
+  );
+  
+  export default memo(Dashboard);
+  

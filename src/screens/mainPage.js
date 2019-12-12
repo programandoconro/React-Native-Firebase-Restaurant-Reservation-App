@@ -38,16 +38,7 @@ export default class mainPage extends Component  {
           /> 
           <Text style={{fontSize:30,fontStyle:'italic',textAlign:'center'}}>Mis Reservas</Text> 
           </TouchableOpacity> 
-          <TouchableOpacity onPress ={() => navigate ('FirstPage')}>  
-
-          <Emoji 
-          name = "hamburger"
-          style={{fontSize: 40, textAlign:'center'}} 
-          /> 
-
-          <Text style={{fontSize:30,textAlign:'center',fontStyle:'italic'}}>Reservar</Text> 
-
-          </TouchableOpacity> 
+         
           <TouchableOpacity onPress ={() => navigate ('FirstPage')} > 
                  
           <Emoji 
@@ -56,7 +47,7 @@ export default class mainPage extends Component  {
           style={{fontSize: 60, textAlign:'center'}} 
           
           /> 
-          <Text style={{fontSize:40,fontStyle:'italic',textAlign:'center'}}>Cactus</Text> 
+          <Text style={{fontSize:40,fontStyle:'italic',textAlign:'center'}}> Reservar </Text> 
           </TouchableOpacity> 
           </Animated.View>
           </Background> 
