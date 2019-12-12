@@ -28,5 +28,14 @@ https://github.com/progamandoconro/Firebase-Real-Time-Web-Admin-App
     cd React-Native-Restaurant-Reservation-App
     npm install
     expo start
+    
+# Screenshots:
+
+<div style="text-align:center"><img src="https://github.com/progamandoconro/React-Native-Restaurant-Reservation-App/blob/postmortem/sample_pictures/Screenshot_2019-12-12-01-15-04.png " /></div>
+<div style="text-align:center"><img src="https://github.com/progamandoconro/React-Native-Restaurant-Reservation-App/blob/postmortem/sample_pictures/Screenshot_2019-12-12-01-15-48.png " /></div>
+<div style="text-align:center"><img src="https://github.com/progamandoconro/React-Native-Restaurant-Reservation-App/blob/postmortem/sample_pictures/Screenshot_2019-12-12-01-15-58.png " /></div>
+<div style="text-align:center"><img src="https://github.com/progamandoconro/React-Native-Restaurant-Reservation-App/blob/postmortem/sample_pictures/Screenshot_2019-12-12-01-16-18.png " /></div>
+<div style="text-align:center"><img src="https://github.com/progamandoconro/React-Native-Restaurant-Reservation-App/blob/postmortem/sample_pictures/Screenshot_2019-12-12-01-16-28.png " /></div>
+<div style="text-align:center"><img src=" https://github.com/progamandoconro/React-Native-Restaurant-Reservation-App/blob/postmortem/sample_pictures/Screenshot_2019-12-12-01-16-54.png" /></div>
    
  
