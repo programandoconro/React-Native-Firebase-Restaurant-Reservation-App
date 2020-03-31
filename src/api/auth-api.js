@@ -82,7 +82,7 @@ export const sendEmailWithPassword = async email => {
         };
       case "auth/too-many-requests":
         return {
-          error: "Demasiados intento, espera un minuto e intenta de nuevo."
+          error: "Demasiados intentos, espera un minuto e intenta de nuevo."
         };
       default:
         return {
